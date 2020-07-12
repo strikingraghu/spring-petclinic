@@ -7,6 +7,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/spring-projects/spring-petclinic.git'
+                git 'git remote prune origin --dry-run'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean -X"
